@@ -1,0 +1,171 @@
+header {
+    height: 130vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header_container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+/* =================== CTA ==================== */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+
+/* =================== HEADER SOCIALS ==================== */
+.header_socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header_socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/* =================== Logo ==================== */
+.me {
+    background: white;
+    /*background: linear-gradient(var(--color-primary), transparent) ;*/
+    width: 50rem;
+    height: fit-content;
+    position: absolute;
+    left: calc(50% - 20rem);
+    margin-top: 2rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 4rem 2.5rem 1.5rem 2.5rem;
+}
+
+/* =================== Company Logo ==================== */
+.logo-icon {
+    background: linear-gradient(var(--color-black), transparent);
+    border: 0.3rem solid var(--color-primary-variant);
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    margin-top: -5rem;
+    border-radius: 12rem 12rem 12rem 12rem;
+    overflow: hidden;
+    padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+    align-items: center;
+}
+
+.logo-icon img {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: -2.6rem;
+    margin-left: -.8rem;
+}
+
+/* =================== SCROLL DOWN ==================== */
+.scroll_down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 100;
+    font-size: 0.9rem;
+    font-size: 20px;
+    color: var(--color-primary);
+}
+
+/*============MEDIA QUERIES (MEDIUM DEVICES)==================*/
+@media screen and (max-width:1024px) {
+    header {
+        height: 67vh;
+    }
+
+    .logo-icon {
+        /* background: linear-gradient(var(--color-black), transparent) ;
+    background: linear-gradient(var(--color-black), transparent) ;
+    border: 0.3rem solid var(--color-primary-variant);
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    margin-top: 0 auto;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+        gap:1rem;
+    padding: 1.6rem 0.5rem 1.5rem 0.5rem; */
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+    .me {
+        width: 27rem;
+        height: 28rem;
+        position: absolute;
+        margin-top: 0 auto;
+        overflow: hidden;
+    }
+}
+
+/*============MEDIA QUERIES (SMALL DEVICES)==================*/
+@media screen and (max-width:600px) {
+    header {
+        height: 80vh;
+
+
+    }
+
+    .logo-icon {
+        background: linear-gradient(var(--color-black), transparent);
+        border: 0.3rem solid var(--color-primary-variant);
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        margin-top: 0 auto;
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+
+
+    .logo-icon img {
+
+        width: 60px;
+        height: 60px;
+        /* Set a fixed height */
+        object-fit: cover;
+        /* Fit the image within the container while maintaining aspect ratio */
+        border-radius: 50%;
+        transition: background-color 0.3s ease-in-out;
+        margin-bottom: -3rem;
+    }
+
+    .me {
+        width: 23rem;
+        height: 26rem;
+        position: absolute;
+        margin-top: 0 auto;
+        overflow: hidden;
+        left: calc(50% - 11rem);
+    }
+
+    .header_socials,
+    .scroll_down {
+        display: none;
+    }
+}
